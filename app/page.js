@@ -8,14 +8,15 @@ export default function Home() {
           autoPlay={true}
           muted={true}
           loop={true}
+          controls={false}
         />
       </section>
-      <section className="bg-gray-200 text-center items-center w-1/3 m-auto mt-10 bg-opacity-70">
+      <section className="bg-gray-200 text-center items-center lg:w-1/3 md:w-3/5 w-5/6 m-auto mt-10 bg-opacity-70">
         <h1 className="text-4xl font-bold text-center items-center text-slate-900 p-4">
         Guía de la Página
         </h1>
       </section>
-      <section className="bg-gray-200 items-center w-1/3 m-auto mt-10 bg-opacity-70">
+      <section className="bg-gray-200 items-center lg:w-1/3 md:w-3/5 w-5/6 m-auto mt-10 bg-opacity-70">
         <article className="items-center text-slate-900 p-4">
           <h2 className="font-bold text-2xl">1. Inicio</h2>
           <p className="p-2">

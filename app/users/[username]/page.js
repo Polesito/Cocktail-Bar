@@ -1,10 +1,10 @@
-import { loadUsers, loadUsersByUsername } from "@/lib/users";
+import { loadUsers, loadUserByUsername } from "@/lib/users";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
 export default async function UserPage({ params }) {
   const { username } = params;
-  const user = await loadUsersByUsername(username);
+  const user = await loadUserByUsername(username);
   if (!user) {
     return notFound();
   }
@@ -72,7 +72,7 @@ export default async function UserPage({ params }) {
 }
 
 export async function generateStaticParms() {
-  const allUsers = await loadUsers();
+  const allUsers = await loadUsers(10);
   return allUsers.map((user) => ({
     username: user.login.username,
   }));
